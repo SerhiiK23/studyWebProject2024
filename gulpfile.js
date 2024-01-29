@@ -15,7 +15,7 @@ async function server() {
 }
 
 function styles() {
-    return gulp.src("src/css/**/*.+(scss|sass)")
+    return gulp.src("src/css/*.+(scss|sass)")
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename({ suffix: '.min', prefix: '' })) // Использование функции rename
         //.pipe(autoprefixer({
